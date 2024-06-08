@@ -1,0 +1,53 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import Linkedin from "../components/icons/Linkedin.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Github from "../components/icons/Github.astro";
+import Email from "../components/icons/Email.astro"
+import Experience from "../components/Experience.astro";
+import SectionContainer from '../components/SectionContainer.astro'
+import Briefcase from "../components/icons/Briefcase.astro";
+import Code from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
+---
+
+<Layout title="Portfolio de Jose Antonio Cabrales - Desarrollador y Programador Web con 3 años de experiencia"
+        description="Contrata a Jose Antonio Cabrales para crear tu aplicacion web o movil. Desarrollador Web y desarrollador de video juegos. Especializado en crear aplicaciones unicas">
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-32">
+      <img src="../../public/images/avatar.svg" alt="profile photo" class="rounded-full w-12 h-12 bg-gray-600 mb-4">
+      <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-4">Hey, soy Jose Antonio Cabrales <a href="https://github.com/xanthony003x?tab=repositories" target="_blank" rel="noopener" class="flex justify-center items-center"><Badge>Disponible para trabajar</Badge></a></h1>
+    <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]"><span>+3 años de experiencia.</span><span class="text-yellow-200/90"> Desarrollador web y programador de videojuegos.</span><span class="text-red-200/90"> De Cuba.</span><span class="opacity-75"> Especializado en crear aplicaciones únicas y videojuegos a lo old school ;)</span></h2>
+
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill href="www.linkedin.com/in/jose-antonio-cabrales-8077a9312">
+          <Linkedin class="size-4 md:size-6"/>
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/xanthony003x?tab=repositories">
+          <Github class="size-6"/>
+          Github
+        </SocialPill>
+        <SocialPill href="mailto:josecabralessilvente@gmail.com">
+          <Email class="size-6"/>
+          josecabralessilvente@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="experiencia" class="mt-10">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Briefcase class="size-7"/>Experiencia laboral
+      </h2>
+      <Experience/>
+    </SectionContainer>
+
+    <SectionContainer id="proyectos" class="mt-10">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Code class="size-7"/>Proyectos
+      </h2>
+      <Projects/>
+    </SectionContainer>
+  </main>
+</Layout>
